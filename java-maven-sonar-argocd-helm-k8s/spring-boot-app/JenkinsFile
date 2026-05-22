@@ -12,6 +12,7 @@ pipeline {
     stage('Checkout') {
       steps {
         cleanWs()
+        checkout scm        // ← add this! re-downloads code from GitHub
         sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero.git'
       }
